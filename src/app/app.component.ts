@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
 
 
+export class Pokemon {
+  name: string;
+  health: number;
+}
+
+
 @Component({
-	selector: 'game',
-  template: `Yas`
+  selector: 'game',
+  template: `{{pokemon.health}}`
 })
 
 export class AppComponent {
-	title = "Pokemon";
-	pokemon = "Charmander";
+  pokemon: Pokemon = {
+    name: "Pikachu",
+    health: 300
+  };
 }

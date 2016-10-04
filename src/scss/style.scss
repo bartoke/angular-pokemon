@@ -1,14 +1,10 @@
 
+// Import our settings file
+@import "settings/settings";
+
 // Import Foundation 6
 @import 'foundation';
 
 // Include all modules from Foundation 6
 // Can uncheck some stuff if it's not needed
 @include foundation-everything;
-
-// Import our settings file
-@import "settings/settings";
-
-BODY {
-  background: $primary-color;
-}

@@ -150,6 +150,7 @@ gulp.task("watch", () => {
 	});
 
 	gulp.watch("build/*.html").on("change", browserSync.reload);
+	gulp.watch("build/app/**/*").on("change", browserSync.reload);
 });
 
 //
