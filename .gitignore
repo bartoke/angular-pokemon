@@ -1,0 +1,8 @@
+git-daemon-export-ok
+.DS_Store
+.idea/
+/build
+/npm-debug.log
+/static/admin/node_modules/
+/tmp/
+/vendor/
