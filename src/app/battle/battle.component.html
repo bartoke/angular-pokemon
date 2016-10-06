@@ -1,0 +1,5 @@
+<pokemon [pokemon]="player"></pokemon>
+<pokemon [pokemon]="enemy"></pokemon>
+<chat *ngIf="chatVisible" [message]="chatText" (close)="closeChat()"></chat>
+
+<button (click)="damage(enemy)">Damage</button>

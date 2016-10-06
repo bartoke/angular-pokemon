@@ -1,20 +1,27 @@
 import { Component } from '@angular/core';
 
-
-export class Pokemon {
-  name: string;
-  health: number;
-}
-
+import { Pokemon } from './pokemon';
 
 @Component({
   selector: 'game',
-  template: `{{pokemon.health}}`
+  template: `
+    <battle *ngIf="battle"
+      [player] = "player"
+      [enemy] = "enemy"></battle>
+  `
 })
 
 export class AppComponent {
-  pokemon: Pokemon = {
+  battle: boolean = true;
+
+  player: Pokemon = {
     name: "Pikachu",
     health: 300
-  };
+  }; 
+
+  enemy: Pokemon = {
+    name: "Raichu",
+    health: 300
+  }; 
+
 }

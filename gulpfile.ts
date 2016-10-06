@@ -36,8 +36,8 @@ const PATHS = {
 	],
 
 	assets: [
-		"src/*",
-		"src/!{scss/app}/**/*"
+		"src/**/!(*.ts)",
+		"!src/scss"
 	],
 
 	sass: [
@@ -73,6 +73,7 @@ gulp.task("javascript", () => {
 	return tsResult.js
 		.pipe($.sourcemaps.write({ sourceRoot: "/src" }))
 		.pipe(gulp.dest("build/app"))
+		.pipe(browserSync.reload({ stream: true }));
 });
 
 /////////////////////////////////////////////////////////////////////////////
@@ -150,7 +151,6 @@ gulp.task("watch", () => {
 	});
 
 	gulp.watch("build/*.html").on("change", browserSync.reload);
-	gulp.watch("build/app/**/*").on("change", browserSync.reload);
 });
 
 //
